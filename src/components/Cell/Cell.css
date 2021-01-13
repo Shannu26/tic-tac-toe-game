@@ -1,0 +1,99 @@
+.Cell1{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Cell2{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 2%;
+    left: 35%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Cell3{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 2%;
+    left: 67.5%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Cell4{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Cell5{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Cell6{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    left: 67.5%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Cell7{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 67.5%;
+    left: 2%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Cell8{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 67.5%;
+    left: 35%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Cell9{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 67.5%;
+    left: 67.5%;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.Person1{
+    background-color: black;
+    transition: background-color 3s;
+}
+
+.Person2{
+    background-color: white;
+    transition: background-color 3s;
+}
