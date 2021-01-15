@@ -8,7 +8,15 @@ class App extends Component {
   state = {
     board: [0, 0, 0, 0, 0, 0, 0, 0, 0],
     turn: 1,
-    won: false
+    won: false,
+  }
+
+  resetGame = () => {
+    this.setState({
+      board: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      turn: 1,
+      won: false,
+    })
   }
 
   clickHandler = (index) => {
@@ -20,18 +28,48 @@ class App extends Component {
     })
     console.log(this.state.board)
     this.hasWon(newBoard)
+    this.hasTied(newBoard)
+  }
+
+  hasTied = (board) => {
+    for(let i = 0;i < board.length;i++){
+      if(board[i] === 0) return
+    }
+    if(!this.state.won) this.setState({won: true})
   }
 
   hasWon = (board) => {
     if(board[0] === board[1] &&  board[0] === board[2] && board[0] !== 0){
       this.updateState(board[0])
     }
+    if(board[3] === board[4] &&  board[3] === board[5] && board[3] !== 0){
+      this.updateState(board[3])
+    }
+    if(board[6] === board[7] &&  board[6] === board[8] && board[6] !== 0){
+      this.updateState(board[6])
+    }
+    if(board[0] === board[3] &&  board[0] === board[6] && board[0] !== 0){
+      this.updateState(board[0])
+    }
+    if(board[1] === board[4] &&  board[1] === board[7] && board[1] !== 0){
+      this.updateState(board[1])
+    }
+    if(board[2] === board[5] &&  board[2] === board[8] && board[2] !== 0){
+      this.updateState(board[2])
+    }
+    if(board[0] === board[4] &&  board[0] === board[8] && board[0] !== 0){
+      this.updateState(board[0])
+    }
+    if(board[2] === board[4] &&  board[2] === board[6] && board[2] !== 0){
+      this.updateState(board[2])
+    }
   }
 
   updateState = (value) => {
     this.setState({
       won: true,
-      board: [value, value, value, value, value, value, value, value, value]
+      board: [value, value, value, value, value, value, value, value, value],
+      turn: value
     })
   }
 
@@ -50,6 +88,7 @@ class App extends Component {
         <div className="Board">
           {cells}
         </div>
+        {this.state.won ? <h1 onClick={this.resetGame}>Replay</h1> : null}
       </div>
     );
   }
