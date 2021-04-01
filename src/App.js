@@ -88,7 +88,7 @@ class App extends Component {
         <div className="Board">
           {cells}
         </div>
-        {this.state.won ? <h1 onClick={this.resetGame}>Replay</h1> : null}
+        {this.state.won ? <h1 onClick={this.resetGame} id="replay">Replay</h1> : null}
       </div>
     );
   }
